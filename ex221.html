@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container {
+            width: 868px;
+            height: 950px;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .first {
+            height: 150px;
+            background-color: rgb(251, 255, 0);
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .first form {
+            margin: 0;
+        }
+        .columns {
+            display: flex;
+            gap: 10px;
+            height: 750px;
+        }
+        .column {
+            width: 200px;
+            height: 750px;
+            border: 1px solid black;
+        }
+        .two {
+            background-color: blue;
+        }
+        .three {
+            background-color: red;
+        }
+        .four {
+            background-color: white;
+        }
+        .five {
+            background-color: red;
+        }
+        .six {
+            height: 50px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <form action="input">
+                <input type="text" style="height: 30px; width: 180px;">
+            </form>
+        </div>
+        <div class="columns">
+            <div class="column two"></div>
+            <div class="column three"></div>
+            <div class="column four"></div>
+            <div class="column five"></div>
+        </div>
+        <div class="six"></div>
+    </div>
+</body>
+</html>

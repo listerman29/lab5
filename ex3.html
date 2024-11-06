@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            padding: 20px;
+        }
+        .header {
+            background-color: #333;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            color: aliceblue;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: aliceblue;
+        }
+        .skill {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 120px;
+            text-align: center;
+        }
+        .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+    float: right;
+        }
+        .footer2 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+        }
+        .footer2 > div {
+            background-color: black;
+            height: 100%;
+        }
+        .footer2 > .colored {
+            background-color: rgb(0, 0, 0);
+            width: calc(((100% - 80%) - 50px) / 3);
+            
+        }
+
+        .feature {
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+        }
+        .feature h4 {
+            color: orange;
+        }
+        
+        .footer {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 100%;
+            margin-top: 20px;
+            
+        }
+        .footer h2, h1 {
+            margin: 0;
+            text-align: center;
+            font-family: verdana;
+        }
+        .footer h2{
+            color: orange;
+        }
+        
+        .project {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            float: right;
+            width: 50%;
+        }
+        .projectimg{
+            float: left;
+            width: 50%;
+            height: 100%;
+            
+        }
+        .project-item {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .featurehead{
+            text-align: center;
+            align-items: center;
+        }
+        
+        .main{
+            width: 100%;
+            background-color: #333;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ЩО ВИ ОПАНУЄТЕ?</h1>
+    </div>
+
+    <div class="skills">
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">Angular</div>
+        <div class="skill">GitHub</div>
+    </div>
+
+    <div class="main">
+        <div class="featureshead">
+            <h3 style="text-align: center; color: #ffffff;">МИ ГАРАНТУЄМО НАШИМ ВИПУСКНИКАМ ПРАЦЕВЛАШТУВАННЯ</h2>
+            <h1 style="text-align: center; color: cornflowerblue;">В НЕ ЗАЛЕЖНОСТІ ВІД ВІКУ</h1>
+        </div>
+        <div class="featureimg">
+            
+        </div>
+        <ul class="features">
+            <li class="feature">
+                
+                <h4>НАВЧІТЬ У ЗРІЛОМУ ВІЦІ</h4>
+                <pre>
+В Україні поширений міф про те, що тільки
+молоді люди можутб освіти IT-напрямок. Але
+максимальний вік нашого студента доходить
+до 63 років.
+                </pre>
+            </li>
+            <li class="feature">
+                <h4>НАВЧИТЬ БЕЗ ЗНАННЯ АНГЛІЙСЬКОЇ</h4>
+                <pre>
+Адже в нашому курсі вже включене вивчення
+англійської мови.
+                                    </pre>
+            </li>
+            <li class="feature">
+                <h4>НАВЧИТЬ БЕЗ ПРОФІЛЬНОЇ ОСВІТИ ТА НАВИЧОК</h4>
+                <pre>
+70% наших випускників вже мають освіту, не повʼязану
+з програмуванням.                    
+                </pre>
+            </li>
+            <li class="feature">
+                <h4>НАВЧІТЬ БЕЗ ЗНАННЯ ПРОГРАМУВАННЯ</h4>
+            <pre>
+Більшість наших студентів не знайомі з
+програмуванням, та починають свій шлях з 
+нуля.
+            </pre>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <div class=""></div>
+        <h2>КУРС ПРОГРАМУВАННЯ</h2>
+        <h1>JAVA З ПРАЦЕВЛАШТУВАННЯ:</h1>
+        <div class="projectimg">
+            <img src="imageex31.png" alt="">
+        </div>
+        <div class="project">
+            <ul>
+                <li><h4>СТАЖУВАННЯ В ІТ-КОМПАНІЇ</h4>
+                <pre>
+Покажи себе на курсі і ще до закінчення навчання ми відправимо тебе
+на стажування в ІТ-компанію.
+                </pre>
+            </li>
+            <li><h4>ТРИ ВИПУСКНИХ ПРОЕКТИ</h4>
+                <pre>
+Наприкінці курсу ти будеш мати три проекти, з якими легко
+працевлаштуєшся.
+                </pre>
+            </li>
+            <li><h4>ІНТЕНСИВНІСТЬ</h4>
+                <pre>
+На відміну від інших наші студенти вчаться 6 разів на тиждень впродовж
+всього терміну. Саме тому вони краще за випускників всіх інших шкіл та легко працевлаштовуються.
+                </pre>
+            </li>
+            </ul>
+            
+        </div>
+        
+    </div>
+    <div class="footer2" style="height: 50px; width: 100%; ">
+        <div style="width: 80%;"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+        <div class="colored"></div>
+    </div>
+</div>
+
+</body>
+</html>

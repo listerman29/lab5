@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .body {
+            width: 100%; /* Указаны единицы измерения */
+            border: 2px solid black; /* Указаны стиль и ширина границы */
+            margin: 0 auto; /* Центрирование таблицы */
+        }
+        .one, .six {
+            width: 100%;
+            height: 60px;
+            background-color: yellow;
+            padding: 20px;
+            border: 2px solid black; /* Указаны стиль и ширина границы */
+            text-align: center; /* Центрирование текста */
+        }
+        .two, .three, .four, .five {
+            width: 120px;
+            height: 460px;
+            padding: 15px;
+            vertical-align: top;
+            border: 2px solid black; /* Указаны стиль и ширина границы */
+            text-align: center; /* Центрирование текста */
+        }
+        .two {
+            background-color: blue;
+        }
+        .three {
+            background-color: rgb(255, 0, 0);
+        }
+        .four {
+            background-color: rgb(255, 255, 255);
+        }
+        .five {
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <table class="body">
+        <tr>
+            <td colspan="4" class="one">Заголовок 1</td> <!-- Добавлен текст для заголовка -->
+        </tr>
+        <tr>
+            <td class="two">Блок 1</td> <!-- Добавлен текст для блока -->
+            <td class="three">Блок 2</td>
+            <td class="four">Блок 3</td>
+            <td class="five">Блок 4</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="six">Заголовок 2</td> <!-- Добавлен текст для заголовка -->
+        </tr>
+    </table>
+</body>
+</html>
