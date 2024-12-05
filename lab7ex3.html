@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Zvit 2</title>
+    <style>
+        #task {
+            background-color: #a4d09b;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <img src="img/photo_2024-09-19_22-23-18.jpg" alt="" style="width: 100px; float: right; ">
+    <h2><center>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</center></h2>
+    <h2><center>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</center></h2>
+    <h3><center>Cтудент групи ІС-33 Трофімчук Максим</center></h3>
+    
+    
+    <hr>
+    <section class="sec-but">
+        <a href="index.html"><button>Лабораторна роб. №1</button></a>
+        <a href="index2.html"><button>Лабораторна роб. №2</button> </a>
+        <a href="index3.html"><button>Лабораторна роб. №3</button></a>
+        <a href="index4.html"><button>Лабораторна роб. №4</button></a>
+        <a href="index5.html"><button>Лабораторна роб. №5</button></a>
+        <a href="index6.html"><button>Лабораторна роб. №6</button></a>
+        <a href="index7.html"><button>Лабораторна роб. №7</button></a>
+        <a href="index8.html"><button>Лабораторна роб. №8</button></a>
+        <a href="index9.html"><button>Лабораторна роб. №9</button></a>
+    </section>
+    <hr>
+    <div class="container">
+        <div class="sec-new">
+            <a href="thema7.html"><button class="format-1">Тема, Мета, Місце розташування</button> </a>
+            <p></p>
+            <a href="lab7ex1.html"><button class="format-1">ЗАВДАННЯ №1</button> </a>
+            <p></p>
+            <a href="lab7ex2.html"><button class="format-1">ЗАВДАННЯ №2</button> </a>
+            <p></p>
+            <a href="lab7ex3.html"><button class="format-1">ЗАВДАННЯ №3</button> </a>
+            <p></p>
+            <a href="lab7ex4.html"><button class="format-1">ЗАВДАННЯ №4</button> </a>
+            <p></p>
+            <a href="lab7ex5.html"><button class="format-1">ЗАВДАННЯ №4</button> </a>
+            <p></p>
+            <a href="vysnovky7.html"><button class="format-1">Висновки</button></a>
+        </div>
+        <div class="sec-new-2">
+            <img src="img\lab7\ex3.png" alt="">
+            <div id="task">
+                <<h1>ЗАВДАННЯ 6</h1>
+                <ul id="numberList">
+                    <li>1</li>
+                    <li>4</li>
+                    <li>8</li>
+                    <li>16</li>
+                    <li>30</li>
+                </ul>
+                <button onclick="doubleValues()">Подвоїти</button>
+            </div>
+        
+        </div>
+    </div>
+    <script>
+        function doubleValues() {
+            const list = document.getElementById('numberList');
+            const items = list.getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].innerText = parseInt(items[i].innerText) * 2;
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

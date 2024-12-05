@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Zvit 2</title>
+    <style>
+        #task {
+            background-color: #a4d09b;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        #controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #boxes div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            border-radius: 4px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <img src="img/photo_2024-09-19_22-23-18.jpg" alt="" style="width: 100px; float: right; ">
+    <h2><center>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</center></h2>
+    <h2><center>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</center></h2>
+    <h3><center>Cтудент групи ІС-33 Трофімчук Максим</center></h3>
+    
+    
+    <hr>
+    <section class="sec-but">
+        <a href="index.html"><button>Лабораторна роб. №1</button></a>
+        <a href="index2.html"><button>Лабораторна роб. №2</button> </a>
+        <a href="index3.html"><button>Лабораторна роб. №3</button></a>
+        <a href="index4.html"><button>Лабораторна роб. №4</button></a>
+        <a href="index5.html"><button>Лабораторна роб. №5</button></a>
+        <a href="index6.html"><button>Лабораторна роб. №6</button></a>
+        <a href="index7.html"><button>Лабораторна роб. №7</button></a>
+        <a href="index8.html"><button>Лабораторна роб. №8</button></a>
+        <a href="index9.html"><button>Лабораторна роб. №9</button></a>
+    </section>
+    <hr>
+    <div class="container">
+        <div class="sec-new">
+            <a href="thema7.html"><button class="format-1">Тема, Мета, Місце розташування</button> </a>
+            <p></p>
+            <a href="lab7ex1.html"><button class="format-1">ЗАВДАННЯ №1</button> </a>
+            <p></p>
+            <a href="lab7ex2.html"><button class="format-1">ЗАВДАННЯ №2</button> </a>
+            <p></p>
+            <a href="lab7ex3.html"><button class="format-1">ЗАВДАННЯ №3</button> </a>
+            <p></p>
+            <a href="lab7ex4.html"><button class="format-1">ЗАВДАННЯ №4</button> </a>
+            <p></p>
+            <a href="lab7ex5.html"><button class="format-1">ЗАВДАННЯ №4</button> </a>
+            <p></p>
+            <a href="vysnovky7.html"><button class="format-1">Висновки</button></a>
+        </div>
+        <div class="sec-new-2">
+            <div id="task">
+                <div id="controls">
+                    <input type="number" min="1" max="100" step="1" placeholder="Enter number" />
+                    <button type="button" data-action="create">Create</button>
+                    <button type="button" data-action="destroy">Destroy</button>
+                  </div>
+                  <div id="boxes"></div>                  
+            </div>
+        
+        </div>
+    </div>
+    <script>
+        // Получаем ссылки на элементы
+const input = document.querySelector('#controls input');
+const createButton = document.querySelector('button[data-action="create"]');
+const destroyButton = document.querySelector('button[data-action="destroy"]');
+const boxesContainer = document.getElementById('boxes');
+
+// Функция создания div элементов
+function createBoxes(amount) {
+  const fragment = document.createDocumentFragment(); // Используем фрагмент для оптимизации
+
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.style.width = `${30 + i * 10}px`; // Увеличиваем размер
+    box.style.height = `${30 + i * 10}px`;
+    box.style.backgroundColor = getRandomHexColor();
+    box.textContent = `${i + 1}`; // Номер элемента (необязательно)
+    fragment.appendChild(box);
+  }
+
+  boxesContainer.appendChild(fragment);
+}
+
+// Функция удаления всех div элементов
+function destroyBoxes() {
+  boxesContainer.innerHTML = ''; // Полностью очищаем контейнер
+}
+
+// Функция генерации случайного цвета
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+}
+
+// Обработчики событий для кнопок
+createButton.addEventListener('click', () => {
+  const amount = parseInt(input.value, 10); // Получаем значение из input
+  if (amount > 0 && amount <= 100) {
+    createBoxes(amount);
+  } else {
+    alert('Введите число от 1 до 100.'); // Валидация
+  }
+});
+
+destroyButton.addEventListener('click', destroyBoxes);
+
+</script>
+    
+    
+</body>
+</html>
